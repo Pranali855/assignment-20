@@ -1,0 +1,92 @@
+
+.page-container {
+  width: 100%;              
+  min-height: 80vh;        
+  display: flex;            
+  align-items: center;      
+  justify-content: center;  
+  background-color: #0f172a;
+  padding: 20px;
+ margin-left: 100%;           
+  box-sizing: border-box;   
+}
+
+.emoji-card {
+  width: 450px;
+  max-width: 90%;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #1e293b;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.emoji-card-title {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.emoji-card-description {
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.emoji-display {
+  width: 160px;
+  height: 160px;
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 0 auto 25px auto; 
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.emoji-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.emoji-buttons button {
+  font-size: 28px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  background: white;
+}
+
+.emoji-buttons button:hover {
+  transform: scale(1.1);
+  background: #e2e8f0;
+}
+
+.color-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.color-buttons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.color-buttons button:hover {
+  transform: scale(1.15);
+}
