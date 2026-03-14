@@ -6,40 +6,63 @@ import ColorButton from "./ColorButton/ColorButton";
 function Home() {
   const [emoji, setEmoji] = useState("😊");
   const [bgColor, setBgcolor] = useState("#eee5ea");
+  const [range, setRange] = useState(50);
 
   return (
-    <div className="page-container">
+    <div className="home-con">
       <div
-        className="emoji-card"
+        className="emoji-con"
         style={{
-          backgroundImage:
-            "radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)",
+          fontSize: `${range}px`,
+          backgroundColor: `${bgColor}`,
         }}
       >
-        <h3 className="emoji-card-title">Playing with Emoji Editor</h3>
-        <p className="emoji-card-description">This is the emoji editor using useState.</p>
-        <div className="emoji-display" style={{ backgroundColor: bgColor }}>
-          {emoji}
-        </div>
-        <div className="emoji-buttons">
-          <EmojiButton emoji="😇" setEmoji={setEmoji} />
-          <EmojiButton emoji="🥰" setEmoji={setEmoji} />
-          <EmojiButton emoji="🤗" setEmoji={setEmoji} />
-          <EmojiButton emoji="😴" setEmoji={setEmoji} />
-          <EmojiButton emoji="😀" setEmoji={setEmoji} />
-          <EmojiButton emoji="🥳" setEmoji={setEmoji} />
-          <EmojiButton emoji="😎" setEmoji={setEmoji} />
-          <EmojiButton emoji="☺️" setEmoji={setEmoji} />
-        </div>
-        <div className="color-buttons">
-          <ColorButton bgColor="#5aace6ff" setBgcolor={setBgcolor} />
-          <ColorButton bgColor="#7270e0ff" setBgcolor={setBgcolor} />
-          <ColorButton bgColor="#a071ccff" setBgcolor={setBgcolor} />
-          <ColorButton bgColor="#e65adaff" setBgcolor={setBgcolor} />
-          <ColorButton bgColor="#60314bff" setBgcolor={setBgcolor} />
-          <ColorButton bgColor="#e7e09eff" setBgcolor={setBgcolor} />
-          <ColorButton bgColor="#d18267ff" setBgcolor={setBgcolor} />
-          <ColorButton bgColor="#96efb7bc" setBgcolor={setBgcolor} />
+      </div>
+
+      <div className="page-container">
+        <div
+          className="emoji-card"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle 600px at 50% 50%, rgba(59,130,246,0.3), transparent)",
+          }}
+        >
+          <h3 className="emoji-card-title">Playing with Emoji Editor</h3>
+          <p className="emoji-card-description">
+            This is the emoji editor using useState.
+          </p>
+
+          <div className="emoji-display" style={{ backgroundColor: bgColor }}>
+            {emoji}
+          </div>
+
+          <div className="emoji-buttons">
+            <EmojiButton emoji="😇" setEmoji={setEmoji} />
+            <EmojiButton emoji="🥰" setEmoji={setEmoji} />
+            <EmojiButton emoji="🤗" setEmoji={setEmoji} />
+            <EmojiButton emoji="😴" setEmoji={setEmoji} />
+            <EmojiButton emoji="😀" setEmoji={setEmoji} />
+            <EmojiButton emoji="🥳" setEmoji={setEmoji} />
+            <EmojiButton emoji="😎" setEmoji={setEmoji} />
+            <EmojiButton emoji="☺️" setEmoji={setEmoji} />
+          </div>
+          <div className="range-con">
+            <input type="range" min="0" max="100" className='sider'
+            onChange={(e) => {
+              setRange(e.target.value);
+              }} />
+          </div>
+          
+          <div className="color-buttons">
+            <ColorButton bgColor="#5aace6ff" setBgcolor={setBgcolor} />
+            <ColorButton bgColor="#7270e0ff" setBgcolor={setBgcolor} />
+            <ColorButton bgColor="#a071ccff" setBgcolor={setBgcolor} />
+            <ColorButton bgColor="#e65adaff" setBgcolor={setBgcolor} />
+            <ColorButton bgColor="#60314bff" setBgcolor={setBgcolor} />
+            <ColorButton bgColor="#e7e09eff" setBgcolor={setBgcolor} />
+            <ColorButton bgColor="#d18267ff" setBgcolor={setBgcolor} />
+            <ColorButton bgColor="#96efb7bc" setBgcolor={setBgcolor} />
+          </div>
         </div>
       </div>
     </div>
